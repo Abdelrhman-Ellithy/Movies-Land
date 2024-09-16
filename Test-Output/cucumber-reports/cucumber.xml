@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="8.321" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Search" name="Verify that correct movie is proceed when clicking to a movie" time="8.11">
+<system-out><![CDATA[
+Given The user is on the homepage...........................................passed
+When they searches for "Deadpool" into the search bar.......................passed
+And click on it's image.....................................................passed
+Then the "Deadpool" movie should be displayed...............................passed
+]]></system-out>
+</testcase>
+</testsuite>
