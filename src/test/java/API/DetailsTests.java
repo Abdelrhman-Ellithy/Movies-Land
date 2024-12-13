@@ -10,6 +10,7 @@ public class DetailsTests {
     @Test
     public void invalidID(){
         given().baseUri("http://movieland.runasp.net/").
+        filter(new ApiRequestListener()).
                 when().get("/api/Movies/Details/50")
                 .then()
                 .assertThat()
@@ -20,6 +21,7 @@ public class DetailsTests {
     @Test
     public void invalidParamter(){
         given().baseUri("http://movieland.runasp.net/").
+                filter(new ApiRequestListener()).
                 when().get("/api/Movies/Details/1022789?said=talaat")
                 .then()
                 .assertThat()
@@ -30,6 +32,7 @@ public class DetailsTests {
     @Test
     public void validID(){
         given().baseUri("http://movieland.runasp.net/").
+                filter(new ApiRequestListener()).
                 when().get("/api/Movies/Details/1022789")
                 .then()
                 .assertThat()
